@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  date: 2025-03-13
+  start_time: 2025-03-13 21:54:54
+  end_time: 2025-03-13 21:54:54
+  break_duration: 1
+  total_hours: 1
+
+two:
+  user: two
+  date: 2025-03-13
+  start_time: 2025-03-13 21:54:54
+  end_time: 2025-03-13 21:54:54
+  break_duration: 1
+  total_hours: 1

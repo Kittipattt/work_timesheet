@@ -1,0 +1,27 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: <%= ENV['WORK_TIMESHEET_DATABASE_USERNAME'] || 'postgres' %>
+  password: <%= ENV['WORK_TIMESHEET_DATABASE_PASSWORD'] || '1234' %>
+  host: <%= ENV['WORK_TIMESHEET_DATABASE_HOST'] || '127.0.0.1' %>
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: work_timesheet_development
+  pool: 5
+  username: <%= ENV['USER'] %>
+  password:
+
+
+test:
+  <<: *default
+  database: work_timesheet_test
+
+production:
+  <<: *default
+  database: work_timesheet_production
+  username: <%= ENV['WORK_TIMESHEET_DATABASE_USERNAME'] %>
+  password: <%= ENV['WORK_TIMESHEET_DATABASE_PASSWORD'] %>
+  host: <%= ENV['WORK_TIMESHEET_DATABASE_HOST'] || '127.0.0.1' %>
